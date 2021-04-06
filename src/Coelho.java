@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.*;
 
 public class Coelho {
 	char sexo;
@@ -34,7 +36,7 @@ public class Coelho {
         coelho1.add(cor1);
         coelho1.add(nome1);        
 
-        System.out.println("Os detalhes do coelho são: " + coelho1);
+        System.out.println("Os detalhes do coelho 1 são: " + coelho1);
 		Coelho o1=new Coelho ("Neatherland Dwarf");
 		o1.saltitar(5);
         
@@ -47,7 +49,7 @@ public class Coelho {
         coelho2.add(cor2);
         coelho2.add(nome2);        
 
-        System.out.println("Os detalhes do coelho são: " + coelho2);
+        System.out.println("Os detalhes do coelho 2 são: " + coelho2);
         Coelho o2=new Coelho ("Florida White");
 		o2.comer("cenoura");
         
@@ -60,9 +62,31 @@ public class Coelho {
         coelho3.add(cor3);
         coelho3.add(nome3);        
 
-        System.out.println("Os detalhes do coelho são: " + coelho3);
+        System.out.println("Os detalhes do coelho 3 são: " + coelho3);
         Coelho o3=new Coelho ("Flemish Giant");
 		o3.chiar("O que há, velhinho?");
+		
+		Set<String> hash_Set = new HashSet<String>();
+		
+		hash_Set.add("Neatherland Dwarf");
+		hash_Set.add("Florida White");
+		hash_Set.add("Flemish Giant");
+		
+		System.out.println(hash_Set);
+		
+		Map map=new HashMap();  
+	    //Adicionando elementos do Map  
+	    map.put(1,"Neatherland Dwarf");  
+	    map.put(2,"Florida White");  
+	    map.put(3,"Flemish Gian");   
+	    //Percorrendo o map 
+	    Set set=map.entrySet();
+	    Iterator itr=set.iterator();  
+	    while(itr.hasNext()){  
+	        //Covertendo o map
+	        Map.Entry entry=(Map.Entry)itr.next();  
+	        System.out.println(entry.getKey()+" "+entry.getValue());  
+	    } 
     }
 	
 	
